@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The A-Team · Munnar × Vagamon Expedition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar" id="nav">
+  <nav class="links">
+    <button class="active" data-page="home">Home</button>
+    <button data-page="plan">Day's Planning</button>
+    <button data-page="travels">Travels</button>
+    <button data-page="map">Map &amp; Contact</button>
+  </nav>
+</header>
+
+<!-- HOME -->
+<main class="page active" id="home">
+  <section class="hero" id="hero">
+    <span class="sticker s1">01 – 02 DEC 2026</span>
+    <span class="sticker s2">1 VAN · 2 DAYS · 0 SLEEP*</span>
+    <p class="presents">The A - Team Presents</p>
+    <h1><span>MUNNAR</span><i>×</i><span class="outline">VAGAMON</span></h1>
+    <p class="tag">Night drive. Tea clouds. Jeep mud. Pine fog. Repeat.</p>
+    <div class="countdown" id="countdown"></div>
+    <div class="actions"><button class="btn" data-go="plan">See the plan →</button><button class="btn ghost" data-go="map">View route</button></div>
+  </section>
+  <div class="marquee"><div>
+    <span>NIGHT DRIVE ✦ TEA PLANTATIONS ✦ ERAVIKULAM ✦ ECHO POINT ✦ TOP STATION ✦ CAMPFIRE ✦ ULUPUNNI JEEP SAFARI ✦ THANGAL PARA ✦ PINE FOREST ✦ </span>
+    <span>NIGHT DRIVE ✦ TEA PLANTATIONS ✦ ERAVIKULAM ✦ ECHO POINT ✦ TOP STATION ✦ CAMPFIRE ✦ ULUPUNNI JEEP SAFARI ✦ THANGAL PARA ✦ PINE FOREST ✦ </span>
+  </div></div>
+
+  <section class="wrap">
+    <div class="stats">
+      <div><b>2</b><span>Days</span></div>
+      <div><b>20+</b><span>Stops</span></div>
+      <div><b>8h</b><span>Night drive</span></div>
+      <div><b>1</b><span>Van, one crew</span></div>
+    </div>
+
+    <h2 class="h2">The two destinations</h2>
+    <div class="dest">
+      <article class="dcard" data-go="plan"><div class="ph g0" data-img="tea"></div><div class="dtxt"><small>Day 1</small><h3>Munnar</h3><p>Tea estates, Eravikulam, Mattupetty, Echo Point and Top Station.</p></div></article>
+      <article class="dcard" data-go="plan"><div class="ph g2" data-img="pine"></div><div class="dtxt"><small>Day 2</small><h3>Vagamon</h3><p>Ulupunni jeep safari, Thangal Para and the quiet Pine Forest.</p></div></article>
+      <article class="dcard" data-go="travels"><div class="ph g1" data-img="night" data-image="travel.jpg"></div><div class="dtxt"><small>The road</small><h3>On the way</h3><p>An overnight drive, scenic ghat roads and a return through Theni and Trichy.</p></div></article>
+    </div>
+    <footer class="foot">*Sleeping happens in the van. Timings are tentative and depend on weather and traffic.</footer>
+  </section>
+</main>
+
+<!-- PLAN -->
+<main class="page" id="plan"><div class="wrap">
+  <p class="eyebrow dark">Itinerary</p>
+  <h2 class="title">Day's Planning</h2>
+  <p class="sub">Select any highlighted stop to see photos and details.</p>
+  <div class="tabs" id="dayTabs">
+    <button class="active" data-day="0">Day 1 · Munnar → Vagamon</button>
+    <button data-day="1">Day 2 · Vagamon → Home</button>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</div></main>
+
+<!-- TRAVELS -->
+<main class="page" id="travels"><div class="wrap">
+  <p class="eyebrow dark">Experiences</p>
+  <h2 class="title">Travels</h2>
+  <p class="sub"><b>Interior:</b> places you step into. <b>Exterior:</b> roads, viewpoints and rides.</p>
+  <div class="tabs" id="catTabs">
+    <button class="active" data-cat="in">Interior</button>
+    <button data-cat="out">Exterior</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></main>
+
+<!-- MAP -->
+<main class="page" id="map"><div class="wrap">
+  <p class="eyebrow dark">Journey</p>
+  <h2 class="title">Route &amp; Contact</h2>
+  <div class="mapwrap">
+    <div id="osm"></div>
+    <button class="btn small" id="drive">🚐 Drive the route</button>
+  </div>
+  <div class="legend"><span><i class="l1"></i>Outbound: Villupuram → Munnar → Vagamon</span><span><i class="l2"></i>Return: Kumily → Villupuram</span></div>
+  <div class="contact">
+    <div class="card"><small>Starting point</small><h3>Villupuram</h3><img class="card-photo" src="images/villupuram.jpg" alt="Villupuram, the trip starting point"><p>10 PM or earlier · 01 Dec 2026</p></div>
+    <div class="card"><small>Ending point</small><h3>Villupuram</h3><p>Late night · 02 Dec 2026</p></div>
+    <div class="card"><small>Contact</small><h3>Get in touch</h3>
+      <p>📞 <a href="tel:+910000000000">+91 00000 00000</a><br>💬 <a href="https://wa.me/910000000000">WhatsApp</a><br>✉️ <a href="mailto:ateam@example.com">ateam@example.com</a></p></div>
+  </div>
+  <footer class="foot">2 days voyage over · The A - Team</footer>
+</div></main>
+
+<div class="modal" id="modal">
+  <div class="sheet">
+    <button class="close" id="close" aria-label="Close">✕</button>
+    <span class="chip" id="mTime"></span>
+    <h3 id="mTitle"></h3>
+    <p class="line" id="mLine"></p>
+    <div class="shots" id="mShots"></div>
+    <p id="mDesc"></p>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
