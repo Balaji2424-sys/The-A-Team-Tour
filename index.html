@@ -70,12 +70,25 @@
 <main class="page" id="travels"><div class="wrap">
   <p class="eyebrow dark">Experiences</p>
   <h2 class="title">Travels</h2>
-  <p class="sub"><b>Interior:</b> places you step into. <b>Exterior:</b> roads, viewpoints and rides.</p>
+  <p class="sub"><b>Interior:</b> places you step into. <b>Exterior:</b> roads, viewpoints and rides. <b>Travel Partner:</b> the company taking us there.</p>
   <div class="tabs" id="catTabs">
-    <button class="active" data-cat="in">Interior</button>
-    <button data-cat="out">Exterior</button>
+    <button class="active" data-cat="in" aria-pressed="true">Interior</button>
+    <button data-cat="out" aria-pressed="false">Exterior</button>
+    <button data-cat="partner" aria-pressed="false">Travel Partner</button>
   </div>
   <div class="grid" id="grid"></div>
+  <section class="partner-panel" id="partnerDetails" aria-label="Travel partner" hidden>
+    <div class="partner-heading">
+      <p class="eyebrow dark">Travel Partner</p>
+      <h3>Om Sakthi Travels</h3>
+      <p>Our travel partner for the journey.</p>
+      <p class="partner-contact">Manager: <strong>Mr. Raja</strong> · <a href="tel:+919842370836">98423 70836</a></p>
+    </div>
+    <div class="partner-gallery">
+      <img src="images/om1.png" alt="Om Sakthi Travels" loading="lazy">
+      <img src="images/om2.png" alt="Om Sakthi Travels" loading="lazy">
+    </div>
+  </section>
 </div></main>
 
 <!-- MAP -->
@@ -91,7 +104,7 @@
     <div class="card"><small>Starting point</small><h3>Villupuram</h3><img class="card-photo" src="images/villupuram.jpg" alt="Villupuram, the trip starting point"><p>10 PM or earlier · 01 Dec 2026</p></div>
     <div class="card"><small>Ending point</small><h3>Villupuram</h3><p>Late night · 02 Dec 2026</p></div>
     <div class="card"><small>Contact</small><h3>Get in touch</h3>
-      <p>📞 <a href="tel:+910000000000">+91 00000 00000</a><br>💬 <a href="https://wa.me/910000000000">WhatsApp</a><br>✉️ <a href="mailto:ateam@example.com">ateam@example.com</a></p></div>
+      <p>📞 <a href="tel:+918148909596">81489 09596</a><br>💬 <a href="https://chat.whatsapp.com/BidPGcMqYNK2XVOQwIcZMB">WhatsApp group</a><br>✉️ <a href="mailto:61theateam@gmail.com">61theateam@gmail.com</a></p></div>
   </div>
   <footer class="foot">2 days voyage over · The A - Team</footer>
 </div></main>

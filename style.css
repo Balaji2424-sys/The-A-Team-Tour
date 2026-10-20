@@ -66,6 +66,15 @@ a{color:var(--ink);font-weight:700}
 .tabs{display:inline-flex;gap:4px;padding:5px;border-radius:99px;border:2px solid var(--ink);margin-bottom:36px;flex-wrap:wrap;background:#fff}
 .tabs button{font:700 .9rem 'DM Sans';padding:10px 22px;border-radius:99px;border:0;background:none;color:var(--ink);cursor:pointer;transition:.2s}
 .tabs button.active{background:var(--ink);color:#fff}
+.partner-panel[hidden],.grid[hidden]{display:none}
+.partner-panel{border:2px solid var(--ink);border-radius:20px;padding:clamp(20px,4vw,40px);box-shadow:var(--sh);background:#fff}
+.partner-heading h3{font-size:clamp(1.8rem,5vw,3rem);line-height:1.1;margin:0 0 8px}
+.partner-heading>p:not(.eyebrow){color:var(--mut);line-height:1.6}
+.partner-heading .eyebrow{margin-bottom:8px}
+.partner-contact{margin-top:14px}
+.partner-contact a{white-space:nowrap}
+.partner-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.partner-gallery img{display:block;width:100%;height:clamp(220px,34vw,440px);object-fit:cover;border:2px solid var(--ink);border-radius:12px}
 
 /* timeline */
 .timeline{position:relative;padding-left:42px}
@@ -166,6 +175,10 @@ a{color:var(--ink);font-weight:700}
   .stats b{font-size:clamp(2.2rem,10vw,3.2rem)}
   #dayTabs{display:flex;flex-direction:column;width:100%;border-radius:20px}
   #dayTabs button{width:100%;text-align:left}
+  #catTabs{display:flex;width:100%;border-radius:18px}
+  #catTabs button{flex:1;padding:9px 8px;font-size:.78rem}
+  .partner-gallery{grid-template-columns:1fr;gap:16px}
+  .partner-gallery img{height:auto;aspect-ratio:16/10}
   .timeline{padding-left:34px}
   .timeline:before{left:10px}
   .row:before{left:-30px}

@@ -166,8 +166,15 @@ function renderGrid(cat){
   revealMobilePhotos();
 }
 $$('#catTabs button').forEach(b => b.onclick = () => {
-  $$('#catTabs button').forEach(x => x.classList.toggle('active', x === b));
-  renderGrid(b.dataset.cat);
+  $$('#catTabs button').forEach(x => {
+    const active = x === b;
+    x.classList.toggle('active', active);
+    x.setAttribute('aria-pressed', String(active));
+  });
+  const isPartner = b.dataset.cat === 'partner';
+  $('#grid').hidden = isPartner;
+  $('#partnerDetails').hidden = !isPartner;
+  if(!isPartner) renderGrid(b.dataset.cat);
 });
 renderGrid('in');
 
